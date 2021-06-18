@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+
 public class Rompecabezas {
 	//Crear un arreglo con los siguientes valores: 3,5,1,2,7,9,8,13,25,32. Imprimir la suma de todos los números en el arreglo. 
 	//El método también debe retornar un arreglo que incluya solo los números que son mayores a 10 
@@ -93,7 +94,58 @@ public class Rompecabezas {
 //	Para ordenar una colección, puede utilizar el método sort de la clase Collections.
 
 
-	
+	public void numerosAleatorios2(){
+        ArrayList<Integer> aleatorios2 = new ArrayList<Integer>();
+        int min = 100;
+        int max = 55;
+        for(int i = 0; i < 10; i++){
+            int num2 = ThreadLocalRandom.current().nextInt(55, 100);
+            aleatorios2.add(num2);
+            if(num2 < min){
+                min = num2;
+            }
+            if(num2 > max){
+                max= num2;
+            }
+        }
+        Collections.sort(aleatorios2);
+        System.out.println(aleatorios2);
+        System.out.println("El valor mínimo del arreglo es: " + min);
+        System.out.println("El valor máximo del arreglo es: " + max);
 
+	}
 	
+//	Crear una cadena aleatoria con 5 caracteres de longitud.
+	
+	
+	  public void cadenaAleatoria(){
+	        Random rand = new Random();
+	        StringBuilder randString = new StringBuilder();
+	        String alfaNumerico = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+	        for(int i = 0; i < 5; i++){
+	            randString.append(alfaNumerico.charAt(rand.nextInt(alfaNumerico.length())));
+	        }
+	        String cadenaFinal = randString.toString();
+	        System.out.println("La cadena aleatoria es: "+ cadenaFinal);
+	    }
+	
+//	  Generar un arreglo con 10 cadenas aleatorias y cada una con 5 caracteres de longitud.
+	
+	  public void arregloAleatorio(){
+		  
+		    Random rand = new Random();
+	        StringBuilder randString = new StringBuilder();
+	        ArrayList<String> listaAleatoria = new ArrayList<String>();
+	        String alfaNumerico = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+	        for(int i = 0; i < 10; i++){
+	        	for(int j = 0; j < 5; i++){
+	        		randString.append(alfaNumerico.charAt(rand.nextInt(alfaNumerico.length())));
+	        	}
+	        	String cadenaFinal = randString.toString();
+	  	        System.out.println("La cadena aleatoria es: "+ cadenaFinal);
+	  	        randString.setLength(0);
+	        }
+	        System.out.println(listaAleatoria);
+	      
+	   }
 }

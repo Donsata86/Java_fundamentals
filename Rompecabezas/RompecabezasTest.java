@@ -10,7 +10,10 @@ public class RompecabezasTest {
 
 //		prueba.nombresLargos();
 //		prueba.abecedario();
-		prueba.numerosAleatorios();
+//		prueba.numerosAleatorios();
+//		prueba.numerosAleatorios2();
+//		prueba.cadenaAleatoria();
+		prueba.arregloAleatorio();
 	}
 
 }
